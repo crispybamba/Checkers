@@ -10,7 +10,9 @@ namespace Checkers
     {
         static void Main(string[] args)
         {
-
+            Console.BackgroundColor = ConsoleColor.DarkBlue;
+            Game game = new Game();
+            Console.ReadLine();
         }
     }
 }

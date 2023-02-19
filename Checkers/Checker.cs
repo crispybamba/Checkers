@@ -10,10 +10,9 @@ namespace Checkers
     {
         private bool color; //white-True Black-False
         private bool isQueen;
-        public Checker(bool color, bool isQoeen = false)
+        public Checker(bool color)
         {
             this.color = color;
-            this.isQueen = isQoeen;
         }
         public bool GetColor => color;
     }

@@ -14,5 +14,6 @@ namespace Checkers
         {
             checker = new Checker(color);
         }
+        public Checker GetChecker() => checker;
     }
 }
