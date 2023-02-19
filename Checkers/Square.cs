@@ -8,12 +8,33 @@ namespace Checkers
 {
     internal class Square
     {
-        private Checker checker;
+        private int row;
+        private int column;
+        private Checker c;
 
-        public Square(bool color)
+        public Square(int row,int column)
         {
-            checker = new Checker(color);
+            this.row = row;
+            this.column = column;
         }
-        public Checker GetChecker() => checker;
+        public void SetChecker(Checker checker)
+        {
+            this.c = checker;
+        }
+                      
+        public Checker GetSqure();
+        public bool HasChecker()
+        {
+            return (c != null);
+        }
+        public Checker Remove()
+        {
+            if (!HasChecker())
+                throw new Exception("Trying to remove a pieace that does not exist");
+            Checker checker = this.c;
+            this.c = null;
+            return checker;
+        }
+        public Checker GetChecker() => c;
     }
 }
